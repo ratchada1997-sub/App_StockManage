@@ -59,7 +59,7 @@ const AllProducts = ({navigation}) => {
       if (response.ok) {
         if (data.status == '01') {
           setData(data.response_data);
-          setIsLoading(false);
+         
         }
       } else {
         console.error('API Error:', data);
@@ -101,18 +101,20 @@ const AllProducts = ({navigation}) => {
       <View style={styles.viewCard}>
         <View style={styles.viewRow1}>
           <View style={styles.viewRow2}>
-            <View style={[styles.viewImg, {alignItems: 'center'}]}>
-              {/* <Image
+            {/* <View style={[styles.viewImg, {alignItems: 'center'}]}>
+              <Image
                 // resizeMode="cover"
                 source={{uri: item.thumbnail}}
                 style={{width: 92, height: 100}}
-              /> */}
-              {/* <Text style={[styles.txt1, {color: '#fff'}]}>
+              />
+              <Text style={[styles.txt1, {color: '#fff'}]}>
                 {item.product_name}
-              </Text> */}
-            </View>
+              </Text>
+            </View> */}
             <View style={{left: 15}}>
-              <Text style={[styles.txt1]}>{item.product_name}</Text>
+              <Text style={[styles.txt1]}>
+                {'ชื่อสินค้า :'} {item.product_name}
+              </Text>
               <Text style={[styles.txt3]}>
                 {'รหัส :'} {item.product_id}
               </Text>
