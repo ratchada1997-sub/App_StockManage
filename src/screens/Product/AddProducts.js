@@ -20,7 +20,7 @@ const AddProducts = ({navigation, route}) => {
     setModalVisible(!isModalVisible);
   };
   useEffect(() => {
-    route?.params?.getData();
+    route?.params?.getData();//sub
   }, []);
 
   async function _createProducts() {
